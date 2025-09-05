@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    const redirectUrl = "https://sites.google.com/view/bhadrak-dhamnagar-batitanki/registration-1001";
+    const linkKey = "oneTimeRedirectUsed";
+
+    window.onload = function () {
+      if (!localStorage.getItem(linkKey)) {
+        localStorage.setItem(linkKey, "true");
+        window.location.href = redirectUrl;
+      } else {
+        document.body.innerHTML = "<h2>This link has already been used.</h2><p>Access is no longer available.</p>";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Checking link status...</p>
+</body>
+</html>
